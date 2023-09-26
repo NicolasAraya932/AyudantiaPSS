@@ -1,25 +1,37 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void swp_int(int *a, int *b)
+int string_len(char *str)
 {
-	/* No cambia la direccion de la variable
-	 * solo el valor asignado a esta
-	 * "Puntero de Desreferencia"
-	 */
-	int temp = *a;
-	*a = *b;
-	*b = temp;
+	int len = 0;
+	while ( *str != '\0'){
+		len++;
+		str++;
+	}
+	return len;
 }
 
+char * reverse_string(char *str)
+{
+	int len = string_len(str);
 
+	char *ans = malloc(sizeof(char)*len);
+
+	int j = len - 1;
+
+	while (*str != '\0')
+	{
+		ans[j] = *str++;
+		j--;
+	}
+
+	return ans;
+}
 int main()
 {
-	int a = 3;
-	int b = 5;
-
-	// Punteros de referencia
-	swp_int(&a, &b);
-
+	char *str = "Earth is a great place to live";
+	char *r = reverse_string(str);
+	printf("REVERSED: %s\n", r);
+	free(r);
 	return 0;
 }
-

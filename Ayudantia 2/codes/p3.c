@@ -10,35 +10,31 @@ int string_len(char *str)
 	return len;
 }
 
-char *reverse_string(char *str)
+void reverse_string(char *str)
 {
-	// Conocer la importancia de las variables locales
+	// Version correcta utiliza la misma direccion de memoria de str
+	char aux;
+
 	int len = string_len(str);
-	/* ans es una variable local de reverse_string y
-	 * cuando termine de ejecutarse la funcion ans
-	 * desaparecera y no podra ser utilizada,
-	 */
-	char ans[sizeof(char)*len];
 	
 	int j = len - 1;
 
-	while ( *str != '\0')
+	for( int i = 0 ; i < len / 2 ; i++ )
 	{
-		ans[j] = *str++;
+		aux = str[i];
+		str[i] = str[j];
+		str[j] = aux;
 		j--;
 	}
-	printf("%s", ans);
-
-	return ans;	
 }
 
 
 int main()
 {
-	char *str = "hola";
+	char str[] = "hola";
 
-	char *rts = reverse_string(str);
+	reverse_string(str);
 
-	printf("\n%s", rts);
+	printf("REVERSED: %s\n", str);
 	return 0;
 }
