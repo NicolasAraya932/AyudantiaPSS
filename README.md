@@ -10,8 +10,8 @@
 
 # Ayudantía 3
 
-[Vínculo](https://github.com/NicolasAraya932/AyudantiaPSS/blob/main/Ayudantia%204/Ayudantia%203.pdf)
+[Vínculo](https://github.com/NicolasAraya932/AyudantiaPSS/blob/main/Ayudantia%203/Ayudantia%203.pdf)
 
 # Ayudantía 4
 
-[Vínculo](https://github.com/NicolasAraya932/AyudantiaPSS/blob/main/Ayudantia%204/Ayudantia%204.pdf)
+[Vínculo](https://github.com/NicolasAraya932/AyudantiaPSS/blob/main/Ayudantia%204/Ayudantia4.pdf)
