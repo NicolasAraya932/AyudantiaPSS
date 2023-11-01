@@ -19,3 +19,7 @@
 # Ayudantía 5
 
 [Vínculo](https://github.com/NicolasAraya932/AyudantiaPSS/blob/main/Ayudantia%205/Ayudantia5.pdf)
+
+# Ayudantía 6
+
+[Vínculo](https://github.com/NicolasAraya932/AyudantiaPSS/blob/main/Ayudantia%206/Ayudantia6.pdf)
