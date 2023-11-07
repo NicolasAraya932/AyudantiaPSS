@@ -19,5 +19,4 @@ int main()
 	printf("El largo es %d", string_len(str));
 
 	return 0;
-
 }

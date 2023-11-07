@@ -3,6 +3,5 @@
 int palindromo(:wq
 		)
 
-
 int main()
 {}

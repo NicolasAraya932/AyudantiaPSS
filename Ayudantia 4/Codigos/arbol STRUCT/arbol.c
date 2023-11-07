@@ -38,7 +38,6 @@ void podar( NodoABB **pa , int y) {
     }
  }
 
-
 void printarbol(NodoABB* pa){
     printf("( %d ", pa->x);    
     if(pa->izq == NULL)
