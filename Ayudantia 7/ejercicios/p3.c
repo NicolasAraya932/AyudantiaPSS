@@ -1,40 +1,38 @@
 #include <stdlib.h>
-#include "sem.c"
+#include "p1.c"
 
 #define QUEUESIZE 10
 
 typedef int Info;
 
-semaphore cola; // cola de tareas en esperar()
-semaphore mutex; // evita datarace en esperando
+semaphore mutex;
+semaphore cola;
 
-int esperando = 0; // numero de threads pendientes a esperar()
+int xD = 0; // en espera
 
 Info *info = NULL;
 
 void difundir(void *pinfo) {
-
     semaphore_wait(&mutex);
-    int bloqueados = esperando; // numero de threads en la cola
-    esperando = 0; // resetea contador de threads
+    int bloqueados = xD;
+    xD = 0;
     semaphore_post(&mutex);
     info = (Info *)pinfo;
     printf("%d\n", *info);
-    while (bloqueados > 0)// pone tickets para threads en esperar()
+    while(bloqueados--)
+    {
         semaphore_post(&cola);
+    }
 }
-
 void *esperar() {
-
     semaphore_wait(&mutex);
-    esperando++; // se incrementa el numero de threads en esperar()
-    printf("%d\n", esperando);
-    semaphore_post(&mutex); 
-    semaphore_wait(&cola); // se encola para recibir la información de difundir()
+    xD++;
+    semaphore_post(&mutex);
+    semaphore_wait(&cola);
     return info;
 }
-
-int main() {
+int main()
+{
     semaphore_init(&cola, 0);
     semaphore_init(&mutex, QUEUESIZE);
 
