@@ -5,14 +5,14 @@
 
 void *calloc(size_t nitems, size_t size)
 {
-	void *ptr = malloc(nitems * size);
+	char *ptr = (char *)malloc(nitems * size);
 
 	if(ptr == NULL)
 		return NULL;
 
 	for(size_t i = 0;i<nitems;i++)
 	{
-		*((char *)ptr + i) = 0;
+		*(ptr + i) = 0;
 	}
 
 	return ptr;
