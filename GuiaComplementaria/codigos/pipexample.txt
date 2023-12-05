@@ -1,0 +1,21 @@
+nicoa@LAPTOP-T1MGHDFA:/codigos$ awk '{print}' execexe.c | less
+#include <unistd.h>
+
+/* Ejemplo de lista con argumentos */
+/* Necesitamos nombre de programa para argv[0] */
+char *const ps_argv[] =
+{"ps", "-ax", 0};
+
+/* Environment */
+char *const ps_envp[] =
+{"PATH=/bin:/usr/bin", "TERM=console", 0};
+
+execl("/bin/ps", "ps", "-ax", 0);            /* asume ps esta en /bin */
+execlp("ps", "ps", "-ax", 0);               /* asume /bin esta en PATH */
+execle("/bin/ps", "ps", "-ax", 0, ps_envp); /* passes own environment */
+
+execv("/bin/ps", ps_argv);
+execvp("ps", ps_argv);
+execve("/bin/ps", ps_argv, ps_envp);
+(END)
+

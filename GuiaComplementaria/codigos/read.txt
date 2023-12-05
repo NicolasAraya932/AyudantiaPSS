@@ -1,0 +1,4 @@
+nicoa@LAPTOP-T1MGHDFA:/codigos$ gcc -o read read.c
+nicoa@LAPTOP-T1MGHDFA:/codigos$ echo wenas | ./read 
+wenas
+nicoa@LAPTOP-T1MGHDFA:/codigos$ 

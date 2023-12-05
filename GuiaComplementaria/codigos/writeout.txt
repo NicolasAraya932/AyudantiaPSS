@@ -1,0 +1,4 @@
+nicoa@LAPTOP-T1MGHDFA:/codigos$ gcc -o writestdout writestdout.c 
+nicoa@LAPTOP-T1MGHDFA:/codigos$ ./writestdout
+Hola Mundo
+nicoa@LAPTOP-T1MGHDFA:/codigos$ 

@@ -1,0 +1,4 @@
+nicoa@LAPTOP-T1MGHDFA:/codigos$ gcc -o close close.c
+nicoa@LAPTOP-T1MGHDFA:/codigos$ cat example.txt
+Hello, File Descriptor!
+nicoa@LAPTOP-T1MGHDFA:/codigos$ 
